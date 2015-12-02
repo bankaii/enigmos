@@ -1,6 +1,7 @@
 ﻿using System.Drawing;
 using System.Windows.Forms;
 
+
 namespace Cpln.Enigmos.Enigmas
 {
     /// <summary>
@@ -13,6 +14,7 @@ namespace Cpln.Enigmos.Enigmas
         /// </summary>
         public CinqEgalEnigmaPanel()
         {
+            TableLayoutPanel centerLayout = new TableLayoutPanel();
             Label lblDonnee1 = new Label();
             Label lblDonnee2 = new Label();
             Label lblDonnee3 = new Label();
@@ -66,6 +68,20 @@ namespace Cpln.Enigmos.Enigmas
             Controls.Add(lblDonnee3);
             Controls.Add(lblDonnee4);
             Controls.Add(lblDonnee5);
+
+            )
+            centerLayout.ColumnCount = 3;
+            centerLayout.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 0.5f));
+            centerLayout.ColumnStyles.Add(new ColumnStyle(SizeType.AutoSize));
+            centerLayout.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 0.5f));
+            centerLayout.RowCount = 3;
+            centerLayout.RowStyles.Add(new RowStyle(SizeType.Percent, 0.5f));
+            centerLayout.RowStyles.Add(new RowStyle(SizeType.AutoSize));
+            centerLayout.RowStyles.Add(new RowStyle(SizeType.Percent, 0.5f));
+            centerLayout.Dock = DockStyle.Fill;
+
+            Controls.Add(centerLayout);
+            centerLayout.Controls.Add(CinqEgalEnigmaPanel, 1, 1);
         }
     }
 }
