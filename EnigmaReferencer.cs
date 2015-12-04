@@ -17,8 +17,8 @@ namespace Cpln.Enigmos
         /// <returns>L'énigme à afficher</returns>
         public static Enigma DebugEnigma()
         {
-            //return new Enigma(new SimpleEnigmaPanel(), "C'est simple");
-            return null;
+            return new Enigma(new CinqEgalEnigmaPanel(), "Que vaut cinq ?");
+            //return null;
             // ---
         }
 
@@ -41,6 +41,7 @@ namespace Cpln.Enigmos
             enigmas.Add(new Enigma(new NbrCarresEnigmaPanel(), "Nombre de carrés"));
             enigmas.Add(new Enigma(new AppuieReponseEnigmaPanel(), "Appuie sur la réponse"));
             enigmas.Add(new Enigma(new CaseVideEnigmaPanel(), "Et ben non"));
+            enigmas.Add(new Enigma(new CinqEgalEnigmaPanel(), "Que vaut cinq ?"));
 
             enigmas.Shuffle();
             return enigmas;

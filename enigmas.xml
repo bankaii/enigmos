@@ -47,4 +47,8 @@
     <answer></answer>
     <hint>Répond pas Morice</hint>
   </enigma>
+  <enigma title="Que vaut cinq ?">
+    <answer>1</answer>
+    <hint>Pars pas trop loin</hint>
+  </enigma>
 </enigmas>

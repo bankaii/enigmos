@@ -69,19 +69,20 @@ namespace Cpln.Enigmos.Enigmas
             Controls.Add(lblDonnee4);
             Controls.Add(lblDonnee5);
 
-            )
-            centerLayout.ColumnCount = 3;
+            centerLayout.ColumnCount = 1;
             centerLayout.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 0.5f));
             centerLayout.ColumnStyles.Add(new ColumnStyle(SizeType.AutoSize));
             centerLayout.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 0.5f));
-            centerLayout.RowCount = 3;
+            centerLayout.RowCount = 5;
             centerLayout.RowStyles.Add(new RowStyle(SizeType.Percent, 0.5f));
             centerLayout.RowStyles.Add(new RowStyle(SizeType.AutoSize));
             centerLayout.RowStyles.Add(new RowStyle(SizeType.Percent, 0.5f));
             centerLayout.Dock = DockStyle.Fill;
 
             Controls.Add(centerLayout);
-            centerLayout.Controls.Add(CinqEgalEnigmaPanel, 1, 1);
+            
+            
+           
         }
     }
 }
