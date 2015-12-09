@@ -28,7 +28,29 @@ namespace Cpln.Enigmos.Enigmas
             lblDonnee4.Text = "4 = 4325";
             lblDonnee5.Text = "5 = ?";
 
-            lblDonnee1.Font = new Font(FontFamily.GenericSansSerif, 24, FontStyle.Bold);
+            centerLayout.ColumnCount = 3;
+            centerLayout.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 0.5f));
+            centerLayout.ColumnStyles.Add(new ColumnStyle(SizeType.AutoSize));
+            centerLayout.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 0.5f));
+            centerLayout.RowCount = 3;
+            centerLayout.RowStyles.Add(new RowStyle(SizeType.Percent, 0.5f));
+            centerLayout.RowStyles.Add(new RowStyle(SizeType.AutoSize));
+            centerLayout.RowStyles.Add(new RowStyle(SizeType.Percent, 0.5f));
+            centerLayout.Dock = DockStyle.Fill;
+            centerLayout.Controls.Add(lblDonnee1);
+            centerLayout.Controls.Add(lblDonnee2);
+            centerLayout.Controls.Add(lblDonnee3);
+            centerLayout.Controls.Add(lblDonnee4);
+            centerLayout.Controls.Add(lblDonnee5);
+
+            Controls.Add(lblDonnee1);
+            Controls.Add(lblDonnee2);
+            Controls.Add(lblDonnee3);
+            Controls.Add(lblDonnee4);
+            Controls.Add(lblDonnee5);
+
+            
+           /* lblDonnee1.Font = new Font(FontFamily.GenericSansSerif, 24, FontStyle.Bold);
             lblDonnee1.ForeColor = Color.Green;
             lblDonnee1.Location = new Point(200, 100);
             lblDonnee1.AutoSize = false;
@@ -61,26 +83,7 @@ namespace Cpln.Enigmos.Enigmas
             lblDonnee5.ForeColor = Color.Purple;
             lblDonnee5.Location = new Point(200, 300);
             lblDonnee5.AutoSize = false;
-            lblDonnee5.Size = TextRenderer.MeasureText(lblDonnee5.Text, lblDonnee5.Font);
-
-            Controls.Add(lblDonnee1);
-            Controls.Add(lblDonnee2);
-            Controls.Add(lblDonnee3);
-            Controls.Add(lblDonnee4);
-            Controls.Add(lblDonnee5);
-
-            centerLayout.ColumnCount = 1;
-            centerLayout.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 0.5f));
-            centerLayout.ColumnStyles.Add(new ColumnStyle(SizeType.AutoSize));
-            centerLayout.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 0.5f));
-            centerLayout.RowCount = 5;
-            centerLayout.RowStyles.Add(new RowStyle(SizeType.Percent, 0.5f));
-            centerLayout.RowStyles.Add(new RowStyle(SizeType.AutoSize));
-            centerLayout.RowStyles.Add(new RowStyle(SizeType.Percent, 0.5f));
-            centerLayout.Dock = DockStyle.Fill;
-
-            Controls.Add(centerLayout);
-            
+            lblDonnee5.Size = TextRenderer.MeasureText(lblDonnee5.Text, lblDonnee5.Font);*/
             
            
         }
