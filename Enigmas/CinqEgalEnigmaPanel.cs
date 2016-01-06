@@ -26,7 +26,7 @@ namespace Cpln.Enigmos.Enigmas
 
             lblDonnee1.Text = "1 = 5";
             lblDonnee2.Text = "2 = 25";
-            lblDonnee3.Text = "3 = 235";
+            lblDonnee3.Text = "3 = 325";
             lblDonnee4.Text = "4 = 4325";
             lblDonnee5.Text = "5 = ?";
 
