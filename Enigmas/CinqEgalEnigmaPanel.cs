@@ -48,20 +48,7 @@ namespace Cpln.Enigmos.Enigmas
             lblDonnee5.ForeColor = Color.Black;
 
             //permet de paramètrer les labels au niveau de la taille, du texte, de la couleur et de la position
-            lblDonnee1.Font = new Font(FontFamily.GenericSansSerif, 24, FontStyle.Bold);
-            lblDonnee1.ForeColor = Color.Green;
-            lblDonnee1.Location = new Point(200, 100);
-            lblDonnee1.AutoSize = false;
-            lblDonnee1.Size = TextRenderer.MeasureText(lblDonnee1.Text, lblDonnee1.Font);
-
-
-
-            lblDonnee2.Font = new Font(FontFamily.GenericSansSerif, 24, FontStyle.Bold);
-            lblDonnee2.ForeColor = Color.Blue;
-            lblDonnee2.Location = new Point(200, 150);
-            lblDonnee2.AutoSize = false;
-            lblDonnee2.Size = TextRenderer.MeasureText(lblDonnee2.Text, lblDonnee2.Font);
-
+            
 
             lblDonnee1.Font = new Font("Arial", 15);
             lblDonnee2.Font = new Font("Arial", 15);
@@ -69,7 +56,7 @@ namespace Cpln.Enigmos.Enigmas
             lblDonnee4.Font = new Font("Arial", 15);
             lblDonnee5.Font = new Font("Arial", 15);
 
-
+            //affiche les labels de façon allignée en colonne et centrée horizontalement
             centerLayout.ColumnCount = 3;
             centerLayout.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 0.5f));
             centerLayout.ColumnStyles.Add(new ColumnStyle(SizeType.AutoSize));
@@ -91,18 +78,9 @@ namespace Cpln.Enigmos.Enigmas
             centerLayout.Controls.Add(lblDonnee3, 1, 3);
             centerLayout.Controls.Add(lblDonnee4, 1, 4);
             centerLayout.Controls.Add(lblDonnee5, 1, 5);
+    
 
-
-           
-            
-           
-
-            //Affiche les labels 
-            Controls.Add(lblDonnee1);
-            Controls.Add(lblDonnee2);
-            Controls.Add(lblDonnee3);
-            Controls.Add(lblDonnee4);
-            Controls.Add(lblDonnee5);
+            ;
 
         }
     }
