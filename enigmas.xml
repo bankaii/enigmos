@@ -10,6 +10,7 @@
   </enigma>
   <enigma title = "Mais où est le 42 ?">
     <hint> Cliquez sur le bon 42 </hint>
+    <answer>saperlipopette</answer>
   </enigma>
   <enigma title="Où est la réponse ?">
     <answer>là-bas</answer>

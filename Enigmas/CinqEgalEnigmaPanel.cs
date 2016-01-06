@@ -21,13 +21,19 @@ namespace Cpln.Enigmos.Enigmas
         /// </summary>
         public CinqEgalEnigmaPanel()
         {
+
             TableLayoutPanel centerLayout = new TableLayoutPanel();
+
+            //Crée des labels
+
             Label lblDonnee1 = new Label();
             Label lblDonnee2 = new Label();
             Label lblDonnee3 = new Label();
             Label lblDonnee4 = new Label();
             Label lblDonnee5 = new Label();
-      
+
+
+            //ajoute du texte dans les labels
 
             lblDonnee1.Text = "1 = 5";
             lblDonnee2.Text = "2 = 25";
@@ -40,6 +46,22 @@ namespace Cpln.Enigmos.Enigmas
             lblDonnee3.ForeColor = Color.Purple;
             lblDonnee4.ForeColor = Color.Green;
             lblDonnee5.ForeColor = Color.Black;
+
+            //permet de paramètrer les labels au niveau de la taille, du texte, de la couleur et de la position
+            lblDonnee1.Font = new Font(FontFamily.GenericSansSerif, 24, FontStyle.Bold);
+            lblDonnee1.ForeColor = Color.Green;
+            lblDonnee1.Location = new Point(200, 100);
+            lblDonnee1.AutoSize = false;
+            lblDonnee1.Size = TextRenderer.MeasureText(lblDonnee1.Text, lblDonnee1.Font);
+
+
+
+            lblDonnee2.Font = new Font(FontFamily.GenericSansSerif, 24, FontStyle.Bold);
+            lblDonnee2.ForeColor = Color.Blue;
+            lblDonnee2.Location = new Point(200, 150);
+            lblDonnee2.AutoSize = false;
+            lblDonnee2.Size = TextRenderer.MeasureText(lblDonnee2.Text, lblDonnee2.Font);
+
 
             lblDonnee1.Font = new Font("Arial", 15);
             lblDonnee2.Font = new Font("Arial", 15);
@@ -70,9 +92,18 @@ namespace Cpln.Enigmos.Enigmas
             centerLayout.Controls.Add(lblDonnee4, 1, 4);
             centerLayout.Controls.Add(lblDonnee5, 1, 5);
 
+
            
             
            
+
+            //Affiche les labels 
+            Controls.Add(lblDonnee1);
+            Controls.Add(lblDonnee2);
+            Controls.Add(lblDonnee3);
+            Controls.Add(lblDonnee4);
+            Controls.Add(lblDonnee5);
+
         }
     }
 }
