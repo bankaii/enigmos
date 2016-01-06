@@ -4,21 +4,10 @@ using System.Windows.Forms;
 
 namespace Cpln.Enigmos.Enigmas
 {
-    /// <summary>
-    /// Exemple d'énigme très simple. Seul un texte est affiché.
-    /// </summary>
+ 
     public class CinqEgalEnigmaPanel : EnigmaPanel
     {
-        private System.Windows.Forms.TableLayoutPanel centerLayout;
-        private System.Windows.Forms.Label lblDonnee1;
-        private System.Windows.Forms.Label lblDonnee2;
-        private System.Windows.Forms.Label lblDonnee3;
-        private System.Windows.Forms.Label lblDonnee4;
-        private System.Windows.Forms.Label lblDonnee5;
-
-        /// <summary>
-        /// Constructeur par défaut, génère un texte et l'affiche dans le Panel.
-        /// </summary>
+      
         public CinqEgalEnigmaPanel()
         {
 
