@@ -75,8 +75,8 @@
     </Compile>
     <Compile Include="Enigmas\Enigme42.cs">
 	  <SubType>Component</SubType>
+	</Compile>
     <Compile Include="Enigmas\OpenDoorEnigmaPanel.cs">
-
       <SubType>Component</SubType>
     </Compile>
     <Compile Include="Enigmas\HazardEnigmaPanel.cs">
