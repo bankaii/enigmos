@@ -14,10 +14,6 @@ namespace Cpln.Enigmos.Enigmas
         public Enigme42()
         {
            
-                   
-
-
-    
             //fonction générant de l'aléatoire
             Random rnd = new Random();
          
@@ -48,9 +44,7 @@ namespace Cpln.Enigmos.Enigmas
                 
             }
 
-
-
-                //Affiche les labels 
+//Affiche les labels 
                
             
             }

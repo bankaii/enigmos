@@ -13,7 +13,8 @@ namespace Cpln.Enigmos.Enigmas
 
             TableLayoutPanel centerLayout = new TableLayoutPanel();
 
-            //Crée des labels
+           // Crée des labels
+
 
             Label lblDonnee1 = new Label();
             Label lblDonnee2 = new Label();
@@ -22,7 +23,7 @@ namespace Cpln.Enigmos.Enigmas
             Label lblDonnee5 = new Label();
 
 
-            //ajoute du texte dans les labels
+            //ajoute les textes et leurs couleurs dans les labels  
 
             lblDonnee1.Text = "1 = 5";
             lblDonnee2.Text = "2 = 25";
@@ -45,7 +46,7 @@ namespace Cpln.Enigmos.Enigmas
             lblDonnee4.Font = new Font("Arial", 15);
             lblDonnee5.Font = new Font("Arial", 15);
 
-            //affiche les labels de façon allignée en colonne et centrée horizontalement
+            //affiche les labels de façon allignée en colonne et en ligne, puis centrée horizontalement et verticalement
             centerLayout.ColumnCount = 3;
             centerLayout.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 0.5f));
             centerLayout.ColumnStyles.Add(new ColumnStyle(SizeType.AutoSize));
@@ -61,6 +62,7 @@ namespace Cpln.Enigmos.Enigmas
             centerLayout.RowStyles.Add(new RowStyle(SizeType.Percent, 38));
             centerLayout.Dock = DockStyle.Fill;
             Controls.Add(centerLayout);
+
 
             centerLayout.Controls.Add(lblDonnee1, 1, 1);
             centerLayout.Controls.Add(lblDonnee2, 1, 2);
