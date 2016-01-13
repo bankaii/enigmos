@@ -18,6 +18,7 @@ namespace Cpln.Enigmos
         public static Enigma DebugEnigma()
         {
 
+
             //return new Enigma(new CinqEgalEnigmaPanel(), "Que vaut cinq ?");
 
             return new Enigma(new Enigme42(), "Mais où est le quarante-deux ?");
@@ -25,6 +26,9 @@ namespace Cpln.Enigmos
 
             //return null;
             // ---
+
+            return new Enigma(new ReflexeEnigmaPanel(), "Reflexe");
+
         }
 
         /// <summary>
@@ -41,13 +45,20 @@ namespace Cpln.Enigmos
             enigmas.Add(new Enigma(new OiseauxEnigmaPanel(), "Le plus long mot"));
             enigmas.Add(new Enigma(new BusEnigmaPanel(), "Sens du bus"));
             enigmas.Add(new Enigma(new CharadeEnigmaPanel(), "Charade"));
+            enigmas.Add(new Enigma(new SeptDifferencesEnigmaPanel(), "Le jeu des 7 différences"));
+            enigmas.Add(new Enigma(new OpenDoorEnigmaPanel(), "Ouvrez la porte !"));
             enigmas.Add(new Enigma(new HazardEnigmaPanel(), "Hazard"));
             enigmas.Add(new Enigma(new MemoireDesChiffresEnigmaPanel(), "Souviens toi"));
             enigmas.Add(new Enigma(new NbrCarresEnigmaPanel(), "Nombre de carrés"));
             enigmas.Add(new Enigma(new AppuieReponseEnigmaPanel(), "Appuie sur la réponse"));
             enigmas.Add(new Enigma(new CaseVideEnigmaPanel(), "Et ben non"));
+
             enigmas.Add(new Enigma(new CinqEgalEnigmaPanel(), "Que vaut cinq ?"));
             enigmas.Add(new Enigma(new Enigme42(), "Mais où est le quarante-deux ?"));
+
+
+            enigmas.Add(new Enigma(new ReflexeEnigmaPanel(), "Reflexe"));
+            enigmas.Add(new Enigma(new DingbatEnigmaPanel(), "Jeu de mot"));
 
             enigmas.Shuffle();
             return enigmas;
