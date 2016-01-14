@@ -6,16 +6,18 @@ using System.Threading.Tasks;
 using System.Drawing;
 using System.Windows.Forms;
 
+
 namespace Cpln.Enigmos.Enigmas
 {
     public class Enigme42 : EnigmaPanel
     {
-        Label[] lblQuaranteDeux = new Label[10];
+
+     
         public Enigme42()
         {
            
             //fonction générant de l'aléatoire
-            Random rnd = new Random();
+            
          
             //mise en place du nombre de ligne et de colonne du pannel 
             TableLayoutPanel centerLayout = new TableLayoutPanel();
@@ -31,8 +33,15 @@ namespace Cpln.Enigmos.Enigmas
             }
             centerLayout.Dock = DockStyle.Fill;
             Controls.Add(centerLayout);
+        }
+        
 
             //boucle créant les labels
+        public void CreationLabel (string[] args)
+        {
+            Label[] lblQuaranteDeux = new Label[10];
+            Random rnd = new Random();
+            TableLayoutPanel centerLayout = new TableLayoutPanel();
             for (int i = 0; i < lblQuaranteDeux.Length; i++)
             {
                 lblQuaranteDeux[i] = new Label();
@@ -41,8 +50,10 @@ namespace Cpln.Enigmos.Enigmas
                 int iLocX = rnd.Next(1, 26);
                 int iLocY = rnd.Next(1, 21);             
                 centerLayout.Controls.Add(lblQuaranteDeux[i], iLocX, iLocY);
-                
             }
+                
+         }
+    
 
 //Affiche les labels 
                
@@ -50,5 +61,5 @@ namespace Cpln.Enigmos.Enigmas
             }
 
         }
-    }
+    
 
