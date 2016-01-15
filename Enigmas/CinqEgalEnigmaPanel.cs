@@ -9,42 +9,17 @@ namespace Cpln.Enigmos.Enigmas
     {
       
         public CinqEgalEnigmaPanel()
-        {
-
+        {         
             TableLayoutPanel centerLayout = new TableLayoutPanel();
 
-           // Crée des labels
+            // crée les labels différents
 
-
-            Label lblDonnee1 = new Label();
-            Label lblDonnee2 = new Label();
-            Label lblDonnee3 = new Label();
-            Label lblDonnee4 = new Label();
-            Label lblDonnee5 = new Label();
-
-
-            //ajoute les textes et leurs couleurs dans les labels  
-
-            lblDonnee1.Text = "1 = 5";
-            lblDonnee2.Text = "2 = 25";
-            lblDonnee3.Text = "3 = 325";
-            lblDonnee4.Text = "4 = 4325";
-            lblDonnee5.Text = "5 = ?";
-
-            lblDonnee1.ForeColor = Color.Blue;
-            lblDonnee2.ForeColor = Color.Red;
-            lblDonnee3.ForeColor = Color.Purple;
-            lblDonnee4.ForeColor = Color.Green;
-            lblDonnee5.ForeColor = Color.Black;
-
-            //permet de paramètrer les labels au niveau de la taille, du texte, de la couleur et de la position
-            
-
-            lblDonnee1.Font = new Font("Arial", 15);
-            lblDonnee2.Font = new Font("Arial", 15);
-            lblDonnee3.Font = new Font("Arial", 15);
-            lblDonnee4.Font = new Font("Arial", 15);
-            lblDonnee5.Font = new Font("Arial", 15);
+            Label[] lblDonnee = new Label[5];
+            for (int i=0; i<lblDonnee.Length; i++)
+      		{
+			lblDonnee[i] = new Label();
+      	   
+      		}
 
             //affiche les labels de façon allignée en colonne et en ligne, puis centrée horizontalement et verticalement
             centerLayout.ColumnCount = 3;
@@ -52,27 +27,39 @@ namespace Cpln.Enigmos.Enigmas
             centerLayout.ColumnStyles.Add(new ColumnStyle(SizeType.AutoSize));
 
             centerLayout.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 0.5f));
-            centerLayout.RowCount = 7;
+            centerLayout.RowCount = 8;
             centerLayout.RowStyles.Add(new RowStyle(SizeType.Percent, 37));
-            centerLayout.RowStyles.Add(new RowStyle(SizeType.Percent, 5));
-            centerLayout.RowStyles.Add(new RowStyle(SizeType.Percent, 5));
-            centerLayout.RowStyles.Add(new RowStyle(SizeType.Percent, 5));
-            centerLayout.RowStyles.Add(new RowStyle(SizeType.Percent, 5));
-            centerLayout.RowStyles.Add(new RowStyle(SizeType.Percent, 5));
+            for (int i = 0; i <=5; i++)
+            {
+                centerLayout.RowStyles.Add(new RowStyle(SizeType.Percent, 5));
+            }
+            
             centerLayout.RowStyles.Add(new RowStyle(SizeType.Percent, 38));
             centerLayout.Dock = DockStyle.Fill;
             Controls.Add(centerLayout);
 
+            //affiche les labels avec toutes leurs propriétés
+            CreationLabel(lblDonnee[0], "1 = 5", Color.Blue, centerLayout, 1);
+            CreationLabel(lblDonnee[1], "2 = 25", Color.Red, centerLayout, 2);
+            CreationLabel(lblDonnee[2], "3 = 325", Color.Purple, centerLayout, 3);
+            CreationLabel(lblDonnee[3], "4 = 4325", Color.Green, centerLayout, 4);
+            CreationLabel(lblDonnee[4], "5 = ?", Color.Black, centerLayout, 5);
 
-            centerLayout.Controls.Add(lblDonnee1, 1, 1);
-            centerLayout.Controls.Add(lblDonnee2, 1, 2);
-            centerLayout.Controls.Add(lblDonnee3, 1, 3);
-            centerLayout.Controls.Add(lblDonnee4, 1, 4);
-            centerLayout.Controls.Add(lblDonnee5, 1, 5);
-    
+        }
 
-            ;
+        //Méthode pour définir les différents labels
+        private void CreationLabel(Label lbl, string text, Color clr, TableLayoutPanel tlp, int row)
+        {
 
+            //permet de paramètrer les labels au niveau de la taille, du texte, de la couleur et de la position
+            lbl = new Label();
+            lbl.Font = new Font("Arial", 15);
+            lbl.Text = text;
+            lbl.ForeColor = clr;
+            tlp.Controls.Add(lbl, 1, row);
         }
     }
 }
+
+ 
+      		

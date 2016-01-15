@@ -22,16 +22,16 @@ namespace Cpln.Enigmos
 
             //return new Enigma(new CinqEgalEnigmaPanel(), "Que vaut cinq ?");
 
-            return new Enigma(new Enigme42(), "Mais où est le quarante-deux ?");
+            return new Enigma(new CinqEgalEnigmaPanel(), "Que vaut cinq ?");
            
 
             //return null;
             // ---
 
-            return new Enigma(new ReflexeEnigmaPanel(), "Reflexe");
+           // return new Enigma(new ReflexeEnigmaPanel(), "Reflexe");
 
 
-            return new Enigma(new RunEnigmaPanel(), "Roux run encore");
+            //return new Enigma(new RunEnigmaPanel(), "Roux run encore");
 
         }
 
@@ -58,7 +58,7 @@ namespace Cpln.Enigmos
             enigmas.Add(new Enigma(new CaseVideEnigmaPanel(), "Et ben non"));
 
             enigmas.Add(new Enigma(new CinqEgalEnigmaPanel(), "Que vaut cinq ?"));
-            enigmas.Add(new Enigma(new Enigme42(), "Mais où est le quarante-deux ?"));
+            enigmas.Add(new Enigma(new Enigme42(), "Mais où est le quarante-deux?"));
 
 
             enigmas.Add(new Enigma(new ReflexeEnigmaPanel(), "Reflexe"));
