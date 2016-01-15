@@ -12,7 +12,7 @@ namespace Cpln.Enigmos.Enigmas
         {         
             TableLayoutPanel centerLayout = new TableLayoutPanel();
 
-            // crée les labels différents
+            // crée les les différents labels
 
             Label[] lblDonnee = new Label[5];
             for (int i=0; i<lblDonnee.Length; i++)
